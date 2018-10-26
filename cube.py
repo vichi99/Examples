@@ -1,5 +1,4 @@
 ##########################
-#s
 #This code was created for fun and practice my skill
 ##########################
 import random
