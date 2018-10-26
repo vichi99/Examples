@@ -1,5 +1,5 @@
 ##########################
-#This code was created for fun and practice my low skill
+#This code was created for fun and practice my skill
 ##########################
 import random
 def name():
