@@ -25,7 +25,8 @@ def table():
 
 
 def number():
-    format_text = """The number {0}:
+    format_text = """
+    \rThe number {0}:
     binary: {0:b} or {0:0>4b} or {0:0>#4b}
     hex: {0:x} or {0:0>4x} or {0:0>#4x}
     oct: {0:o} or {0:0>4o} or {0:0>#4o}
@@ -43,15 +44,18 @@ def number():
         print((format_text + ", {2}").format(number,
                                              (int(number % 10), int(number % 100 / 10)), big_number))
     if length >= 3:
-        print((format_text + ", {2}").format(number, (int(number %
-                                                          10), int(number % 100 / 10), int(number % 1000 / 100)), big_number))
+        print((format_text + ", {2}").format(number, (int(number % 10),
+                                                      int(number % 100 / 10), int(number % 1000 / 100)), big_number))
+
     else:
         pass
     return
 
 
 def cube():
-    text = "Enter the number of cube (1-6) you want to see, 7 to random choice or  >= 8 to see all: "
+    text = """
+    \rEnter the number of cube (1-6) you want to see, 7 to random
+    \rchoice or  >= 8 to see all: """
     value = format_input(text, int)
     if value == 7:
         value = random.randint(1, 6)
@@ -86,7 +90,7 @@ def cube():
 
 def format_input(text, exp_type):
     cond = True
-    while cond == True:
+    while cond is True:
         value = input(text)
         try:
             if len(str(value)) == 0:
