@@ -8,6 +8,7 @@ canvas = tkinter.Canvas(width=width, height=height)
 canvas.pack()
 canvas.config(bg="gray")
 
+
 def random_circles():
     for i in range(1000):
         x = random.randrange(width)
@@ -26,20 +27,36 @@ def random_circles():
         else:
             color = "purple"
 
-        canvas.create_oval(x, y, x + size, y + size, outline=color_o, fill=color)
+        canvas.create_oval(x, y, x + size, y + size,
+                           outline=color_o, fill=color)
     canvas.mainloop()
 
+
 def flag():
-    for i in range(2000):
+    for i in range(2500):
         x = random.randrange(width)
         y = random.randrange(height)
 
-        if 0 <= y < height/2:
+        # Polish Flag
+        # if 0 <= y < height/2:
+        #     color = "white"
+        # else:
+        #     color = "red"
+
+        # Czech Flag
+        # y = ax + b
+        c1 = ((height * x) / width) - y
+        c2 = ((-height * x) / width) + height - y
+        if c1 <= 0 and c2 >= 0:
+            color = "blue"
+        elif 0 <= y < height / 2:
             color = "white"
         else:
             color = "red"
 
-        canvas.create_oval(x, y, x + size, y + size, fill=color, outline = "")
+        canvas.create_oval(x, y, x + size, y + size, fill=color, outline="")
     canvas.mainloop()
-random_circles()
-# flag()
+
+
+# random_circles()
+flag()
