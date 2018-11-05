@@ -3,6 +3,12 @@ width = 640
 height = 480
 cx, cy, size = width / 2, height / 2, 60
 
+# import tkinter
+# main = tkinter.Tk()
+# canvas = tkinter.Canvas(main)
+# canvas.pack()
+# main.mainloop()
+
 canvas = tkinter.Canvas(width=width, height=height)
 canvas.pack()
 canvas.config(bg="gray")
@@ -24,6 +30,7 @@ def circle():
     canvas.create_oval(x, y + size / 2, x + size, y + 1.5 * size)
     canvas.create_oval(x + size / 2, y + size / 2,
                        x + 1.5 * size, y + 1.5 * size)
+    canvas.mainloop()
 
 
 def circle_f():
@@ -32,8 +39,9 @@ def circle_f():
 
     for i in range(0, 3):
         for j in range(0, 3):
-            canvas.create_oval(x + i * size_f - size_f, y + j * size_f - size_f, x + i * size_f + size_f,
-                               y + j * size_f + size_f)
+            canvas.create_oval(x + i * size_f - size_f, y + j * size_f - size_f,
+                                x + i * size_f + size_f,
+                                y + j * size_f + size_f)
 
     canvas.mainloop()
 
