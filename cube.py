@@ -1,6 +1,3 @@
-##########################
-# This code was created for fun and practice my skill
-##########################
 import random
 
 
@@ -115,8 +112,19 @@ def format_input(text, exp_type):
         except:
             print("The input is wrong. Type {} number".format(str(exp_type)))
 
+def guess():
+    text="Guess the number 1-10: "
+    randoms = random.randint(1,10)
+    guess = -1
+    while True:
+        # guess = int(input("Enter number 1-10: "))
+        guess = format_input(text, int)
+        if guess == randoms:
+            print("Correct")
+            break
 
 table()
 name()
 number()
 cube()
+guess()
