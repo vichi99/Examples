@@ -1,6 +1,13 @@
 import random
 
-print("mastermind")
+print("""___  ___          _           ___  ____           _
+|  \/  |         | |          |  \/  (_)         | |
+| .  . | __ _ ___| |_ ___ _ __| .  . |_ _ __   __| |
+| |\/| |/ _` / __| __/ _ \ '__| |\/| | | '_ \ / _` |
+| |  | | (_| \__ \ ||  __/ |  | |  | | | | | | (_| |
+\_|  |_/\__,_|___/\__\___|_|  \_|  |_/_|_| |_|\__,_|
+""")
+
 
 name = input("\nHi, whats your name ?: ")
 
@@ -23,4 +30,11 @@ while True:
         print("Incorrect ! Never mind.")
         incorrect += 1
     total += 1
-print("correct: {} , incorrect: {} , total: {} ".format(correct,incorrect,total))
+
+
+print("""
+\r+{0:-^20}+
+\r| {1:{width}} | {2:{width_n}} |
+\r| {3:{width}} | {4:{width_n}} |
+\r| {5:{width}} | {6:{width_n}} |
+\r+{7:-^20}+""".format("Your Score","Correct",correct, "Incorrect", incorrect, "Total", total,"", width = 10,width_n=5))
