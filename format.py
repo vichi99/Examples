@@ -11,7 +11,8 @@ def name():
 
 def table():
     text = "Table of number"
-    header_num = "| {:{width}} | {:{width}} | {:{width}} | {:{width}} |".format("dec", "bin", "oct", "hex", width=7)
+    header_num = "| {:{width}} | {:{width}} | {:{width}} | {:{width}} |".format(
+        "dec", "bin", "oct", "hex", width=7)
     header_text = "+{0:-^39}+\n" + header_num + "\n{1:->41}"
     table_text = "| {0:{width}d} | {0:#{width}b} | {0:#{width}o} | {0:#{width}x} |"
     print(header_text.format(text, "-", width=28))
@@ -39,13 +40,13 @@ def number():
     if length == 2:
         print((format_text + ", {2}").format(number,
                                              (int(number % 10),
-                                             int(number % 100 / 10)),
+                                              int(number % 100 / 10)),
                                              big_number))
     if length >= 3:
         print((format_text + ", {2}").format(number, (int(number % 10),
                                                       int(number % 100 / 10),
                                                       int(number % 1000 / 100)),
-                                                      big_number))
+                                             big_number))
 
     else:
         pass
@@ -112,9 +113,10 @@ def format_input(text, exp_type):
         except:
             print("The input is wrong. Type {} number".format(str(exp_type)))
 
+
 def guess():
-    text="Guess the number 1-10: "
-    randoms = random.randint(1,10)
+    text = "Guess the number 1-10: "
+    randoms = random.randint(1, 10)
     guess = -1
     while True:
         # guess = int(input("Enter number 1-10: "))
@@ -122,6 +124,7 @@ def guess():
         if guess == randoms:
             print("Correct")
             break
+
 
 table()
 name()
