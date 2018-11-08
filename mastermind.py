@@ -19,9 +19,10 @@ So, {}
 \rThe rules are the folowing. I mean a number and you'll be guessing (1-10).
 If you want end the game,type 'e' or 'end' .
 On the end you will see yours score.\n\n""".format(name))
+
 total, correct, incorrect = 0, 0, 0
 while True:
-    number = str(random.randint(min, max))
+    number = random.randint(min, max)
     tip = input("\nI mean a number...\nYour tip?: ")
     tip = str.lower(str.strip(tip))
     if tip == "e" or tip == "end":
@@ -29,7 +30,13 @@ while True:
     elif tip == "":
         print("Input is empty, try again.")
         continue
-    elif tip == number:
+    try:
+        tip = int(tip)
+    except:
+        print("Error input, try again.")
+        continue
+
+    if tip == number:
         print("Correct !")
         correct += 1
     else:
