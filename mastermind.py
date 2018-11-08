@@ -27,6 +27,7 @@ while True:
     if tip == "e" or tip == "end":
         break
     elif tip == "":
+        print("Input is empty, try again.")
         continue
     elif tip == number:
         print("Correct !")
