@@ -30,9 +30,9 @@ while True:
     elif tip == "":
         print("Input is empty, try again.")
         continue
-    try:
+    elif tip.isdecimal():
         tip = int(tip)
-    except:
+    else:
         print("Error input, try again.")
         continue
 
