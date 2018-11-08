@@ -1,6 +1,7 @@
 import random
-
-print("""___  ___          _           ___  ____           _
+min, max = 1, 10
+print("""
+___  ___          _           ___  ____           _
 |  \/  |         | |          |  \/  (_)         | |
 | .  . | __ _ ___| |_ ___ _ __| .  . |_ _ __   __| |
 | |\/| |/ _` / __| __/ _ \ '__| |\/| | | '_ \ / _` |
@@ -9,20 +10,24 @@ print("""___  ___          _           ___  ____           _
 """)
 
 
-name = input("\nHi, whats your name ?: ")
+name = str.strip(input("\nHi, whats your name ?: "))
+if name == "":
+    name = "Player who doesn't have a name"
 
 print("""
 So, {}
 \rThe rules are the folowing. I mean a number and you'll be guessing (1-10).
-If you want end the game,type 'end' .
+If you want end the game,type 'e' or 'end' .
 On the end you will see yours score.\n\n""".format(name))
-total, correct, incorrect = 0,0,0
+total, correct, incorrect = 0, 0, 0
 while True:
-    number = str(random.randint(1, 10))
+    number = str(random.randint(min, max))
     tip = input("\nI mean a number...\nYour tip?: ")
-
-    if str.lower(str.strip(tip)) == "end":
+    tip = str.lower(str.strip(tip))
+    if tip == "e" or tip == "end":
         break
+    elif tip == "":
+        continue
     elif tip == number:
         print("Correct !")
         correct += 1
@@ -37,4 +42,6 @@ print("""
 \r| {1:{width}} | {2:{width_n}} |
 \r| {3:{width}} | {4:{width_n}} |
 \r| {5:{width}} | {6:{width_n}} |
-\r+{7:-^20}+""".format("Your Score","Correct",correct, "Incorrect", incorrect, "Total", total,"", width = 10,width_n=5))
+\r+{7:-^20}+""".format("Your Score", "Correct", correct,
+                       "Incorrect", incorrect, "Total",
+                       total, "", width=10, width_n=5))
