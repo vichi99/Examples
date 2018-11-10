@@ -30,13 +30,13 @@ def button(x, y, r):
 
 
 def face(x, y, r):
-    x1 = x + r/2
-    y1 = y + r/2
+    x1 = x + r / 2
+    y1 = y + r / 2
     x2 = x1 + r
-    for x, y in [[x1 , y1],[x2,y1],[x+r,y+r]]:
+    for x, y in [[x1, y1], [x2, y1], [x + r, y + r]]:
         canvas.create_oval(x, y, x, y, width=width_mouth)
-    y2 = y + r/2
-    canvas.create_line(x1,y2,x2,y2,width=width_mouth)
+    y2 = y + r / 2
+    canvas.create_line(x1, y2, x2, y2, width=width_mouth)
 
 
 def snowman(x, y, r):
