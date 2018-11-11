@@ -14,8 +14,8 @@ canvas.pack()
 canvas.config(bg="light blue")
 canvas.create_text(width / 2, 30, text=name,
                    font="Monaco 25", fill="black")
-canvas.create_rectangle(width / 2, height / 2,
-                        (width / 2), (height / 2), width=10)
+# canvas.create_rectangle(width / 2, height / 2,
+# (width / 2), (height / 2), width=10)
 
 
 def ball(x, y, r):
