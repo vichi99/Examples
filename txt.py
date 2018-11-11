@@ -68,7 +68,6 @@ def csv_read():
 #         for line in r:
 #             print("{:.<60} {}".format(line["Title"],line["Rating"]))
 
-
 def csv_dict():
     tab = []
     with open("data.csv", "r") as file:
@@ -77,11 +76,19 @@ def csv_dict():
             tab.append(line)
         print(line)
 
+def bro():
+    text = ""
+    with open("test.txt", "r") as file:
+        tx = file.readline(3)
+        print(tx)
+
+
 
 # txt_read()
 # txt_read_easier()
 # txt_with()
 # txt_write()
 # txt_read_del()
-csv_read()
+# csv_read()
 # csv_dict()
+bro()
