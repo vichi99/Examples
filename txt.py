@@ -1,7 +1,8 @@
 import random
+import csv
 
 
-def read():
+def txt_read():
     file = open("test.txt", "r")
     line = file.readline().rstrip()  # strip()
     while line:
@@ -16,7 +17,7 @@ def read():
     file.close()
 
 
-def read_easier():
+def txt_read_easier():
     file = open("test.txt", "r")
     text = file.read()
     print(text)
@@ -29,7 +30,7 @@ def txt_with():
             print(line.rstrip())
 
 
-def write():
+def txt_write():
     file = open("test.txt", "w")  # a = append
     for i in range(10):
         random_n = random.randint(1, 10000)
@@ -37,13 +38,50 @@ def write():
             space = "\t"
         else:
             space = ""
-        file.write("{}number {} => {}\n".format(space, i, random_n))
+        file.write("{}number, {} =>, {}\n".format(space, i, random_n))
     file.close()
 # Binary file is almost the same
 # file= open("test.txt","rb"), we must add 'b' and we know what we want to read
 
 
-# read()
-# read_easier()
-txt_with()
-# write()
+def txt_read_del():
+    delimiter = ","
+    tab = []
+    with open("data.csv", "r") as file:
+        for line in file:
+            line = line.rstrip()
+            tab.append(line.split(delimiter))
+    print(tab)
+
+
+def csv_read():
+    tab = []
+    with open("data.csv", "r") as file:
+        r = csv.reader(file)
+        for line in r:
+            print(line)
+
+# def csv_read():
+#     tab = []
+#     with open("data.csv","r") as file:
+#         r=csv.DictReader(file)
+#         for line in r:
+#             print("{:.<60} {}".format(line["Title"],line["Rating"]))
+
+
+def csv_dict():
+    tab = []
+    with open("data.csv", "r") as file:
+        r = csv.DictReader(file)
+        for line in r:
+            tab.append(line)
+        print(line)
+
+
+# txt_read()
+# txt_read_easier()
+# txt_with()
+# txt_write()
+# txt_read_del()
+csv_read()
+# csv_dict()

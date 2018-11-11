@@ -35,6 +35,7 @@ virtualenvwrapper
 
         export PROJECT_HOME=~/projects      or WORKON_HOME
         mkdir -p $PROJECT_HOME
+        virtualenv --python=python3
 
 \\ => back slash
 \n => new line
