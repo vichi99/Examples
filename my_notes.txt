@@ -42,3 +42,10 @@ virtualenvwrapper
 \b => backspace
 \f => form feed
 \r => carriage return
+
+txt open():
+          "r" -> open for read
+          "w" -> open for write, this delete all before
+          "a" -> open for write, append text
+          "b" -> binary mode ("rb")
+          "t" -> text mode (default)
