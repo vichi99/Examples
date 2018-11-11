@@ -1,0 +1,10 @@
+	number 0 => 4273
+number 1 => 1169
+	number 2 => 7728
+number 3 => 4175
+	number 4 => 6284
+number 5 => 2190
+	number 6 => 5099
+number 7 => 9870
+	number 8 => 840
+number 9 => 9000
