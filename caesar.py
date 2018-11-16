@@ -1,3 +1,7 @@
+##############################################################################
+# The program can encrypt or decrypt chars from the keyboard
+##############################################################################
+
 rot = int(input("Enter rotation: "))
 action = input("Do you want [e]ncrypt or [d]ecrypt data?: ")
 data = input("Enter text: ")

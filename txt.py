@@ -1,9 +1,13 @@
+##############################################################################
+# The program shows how works reading and writing for a txt and csv file
+##############################################################################
+
 import random
 import csv
 
 
 def txt_read():
-    file = open("test.txt", "r")
+    file = open("data/test.txt", "r")
     line = file.readline().rstrip()  # strip()
     while line:
         print(line)
@@ -18,20 +22,20 @@ def txt_read():
 
 
 def txt_read_easier():
-    file = open("test.txt", "r")
+    file = open("data/test.txt", "r")
     text = file.read()
     print(text)
     file.close()
 
 
 def txt_with():
-    with open("test.txt", "r") as file:
+    with open("data/test.txt", "r") as file:
         for line in file:
             print(line.rstrip())
 
 
 def txt_write():
-    file = open("test.txt", "w")  # a = append
+    file = open("data/test.txt", "w")  # a = append
     for i in range(10):
         random_n = random.randint(1, 10000)
         if i % 2 == 0:
@@ -47,7 +51,7 @@ def txt_write():
 def txt_read_del():
     delimiter = ","
     tab = []
-    with open("data.csv", "r") as file:
+    with open("data/data.csv", "r") as file:
         for line in file:
             line = line.rstrip()
             tab.append(line.split(delimiter))
@@ -56,7 +60,7 @@ def txt_read_del():
 
 def csv_read():
     tab = []
-    with open("data.csv", "r") as file:
+    with open("data/data.csv", "r") as file:
         r = csv.reader(file)
         for line in r:
             print(line)
@@ -71,12 +75,11 @@ def csv_read():
 
 def csv_dict():
     tab = []
-    with open("data.csv", "r") as file:
+    with open("data/data.csv", "r") as file:
         r = csv.DictReader(file)
         for line in r:
             tab.append(line)
         print(line)
-
 
 
 
@@ -86,4 +89,4 @@ def csv_dict():
 # txt_write()
 # txt_read_del()
 # csv_read()
-# csv_dict()
+csv_dict()
