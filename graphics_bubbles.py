@@ -12,7 +12,7 @@ canvas = tkinter.Canvas(width=width, height=height, bg="gray")
 canvas.pack()
 
 
-def paint_square(x, y, size, color):
+def paint_circle(x, y, size, color):
     coordinates = x - size / 2, y - size / 2, x + size / 2, y + size / 2
     canvas.create_oval(coordinates, fill=color)
 
@@ -31,6 +31,6 @@ for x in range(2000):
     y = random.randrange(height)
     size = size_def(x, y)
     color = color_def(size)
-    paint_square(x, y, size / 4, color)
+    paint_circle(x, y, size / 4, color)
 
 canvas.mainloop()
