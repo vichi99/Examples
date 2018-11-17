@@ -50,3 +50,20 @@ txt open():
           "a" -> open for write, append text
           "b" -> binary mode ("rb")
           "t" -> text mode (default)
+
+darth vader:
+a.index()
+a.append()
+a.instert(index, value)
+a.pop()
+a.remove()         # remove first value , usefully using with while
+a.sort()
+enumerate(a)       # for index, value in enumerate(a):.....
+text.split()
+" ".join(words)
+text.replace(what, out)
+a.isdecimal()
+text.strip()      # delete char in ()
+text.lower()      #upper
+del a[]
+dictionary.update(otherdicionary)

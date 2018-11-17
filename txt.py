@@ -51,7 +51,7 @@ def txt_write():
 def txt_read_del():
     delimiter = ","
     tab = []
-    with open("data/data.csv", "r") as file:
+    with open("data/movies.csv", "r") as file:
         for line in file:
             line = line.rstrip()
             tab.append(line.split(delimiter))
@@ -60,7 +60,7 @@ def txt_read_del():
 
 def csv_read():
     tab = []
-    with open("data/data.csv", "r") as file:
+    with open("data/movies.csv", "r") as file:
         r = csv.reader(file)
         for line in r:
             print(line)
@@ -75,7 +75,7 @@ def csv_read():
 
 def csv_dict():
     tab = []
-    with open("data/data.csv", "r") as file:
+    with open("data/movies.csv", "r") as file:
         r = csv.DictReader(file)
         for line in r:
             tab.append(line)
@@ -88,5 +88,5 @@ def csv_dict():
 # txt_with()
 # txt_write()
 # txt_read_del()
-# csv_read()
-csv_dict()
+csv_read()
+# csv_dict()
