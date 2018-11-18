@@ -60,6 +60,7 @@ a.remove()         # remove first value , usefully using with while
 a.sort()
 enumerate(a)       # for index, value in enumerate(a):.....
 text.split()
+"hello\nworld".splitlines() # ['hello'. 'world']
 " ".join(words)
 text.replace(what, out)
 a.isdecimal()
