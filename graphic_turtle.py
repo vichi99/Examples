@@ -162,7 +162,6 @@ def following_turtles(t):
         turtle.update()
 
 
-# MAIN
 t = turtle.Turtle()
 turtle.bgcolor("yellow")
 
@@ -173,9 +172,14 @@ def run_all():
     for i in function:
         i
         time.sleep(2)
+# func_circle(t)
+spiral_1(t)
+# spiral_2(t)
+# spiral_3(t)
+# test(t)
+# paralel_turtle(t)
+# following_turtles(t)
 
-
-run_all()
 
 time.sleep(3)
 

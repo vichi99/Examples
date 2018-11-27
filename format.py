@@ -130,8 +130,21 @@ def guess():
             break
 
 
+def numbers(A, B):
+    count_numbers = 0
+    if A <= B:
+        root = [i*2 for i in range(A,B) if (i ** (1/2)) % 1 == 0]
+        count_root=len(root)
+        print(count_root)
+        return (count_root)
+    else:
+        print(count_numbers)
+        return (count_numbers)
+
+
 table()
 name()
 number()
 cube()
 guess()
+numbers(4,17)
