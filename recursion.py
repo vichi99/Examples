@@ -54,19 +54,20 @@ def fib_better(n):  # this is a better example, we write value to dict
 
 def chars(char,sentence):
     counter = 0
-    length = len(sentence)
-    def count(char,sentence):
+    n = len(sentence)
+    def count(char,sentence,n):
         global counter
-        if sentence == "":
+        if n == -1:
             return
-        if char == sentence[-1]:
+        if sentence[n-1] == char:
             counter += 1
-        count(char, sentence)
+        count(char, sentence[n-1],n-1)
+    count(char,sentence)
     print(counter)
-dodelat vymazani posledni znaku sentě
+
+
 char = "m"
 sentence = "mama"
-char.
 chars(char,sentence)
 
 
