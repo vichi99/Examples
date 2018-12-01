@@ -51,6 +51,26 @@ def fib_better(n):  # this is a better example, we write value to dict
         cache[n] = x
         return x
 
+
+def chars(char,sentence):
+    counter = 0
+    length = len(sentence)
+    def count(char,sentence):
+        global counter
+        if sentence == "":
+            return
+        if char == sentence[-1]:
+            counter += 1
+        count(char, sentence)
+    print(counter)
+dodelat vymazani posledni znaku sentě
+char = "m"
+sentence = "mama"
+char.
+chars(char,sentence)
+
+
+
 # spiral(10)
 # numbers(5)
 
@@ -59,5 +79,5 @@ def fib_better(n):  # this is a better example, we write value to dict
 #     print("fib({}) => {}".format(i, fib(i)))
 
 
-for i in range(100):
-    print("fib({}) => {}".format(i, fib_better(i)))
+# for i in range(100):
+#     print("fib({}) => {}".format(i, fib_better(i)))
