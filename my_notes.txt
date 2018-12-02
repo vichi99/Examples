@@ -51,7 +51,7 @@ txt open():
           "b" -> binary mode ("rb")
           "t" -> text mode (default)
 
-darth vader:
+darth vader: (list)
 a.index()
 a.append()
 a.instert(index, value)

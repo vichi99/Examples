@@ -52,24 +52,38 @@ def fib_better(n):  # this is a better example, we write value to dict
         return x
 
 
-def chars(char,sentence):
-    counter = 0
-    n = len(sentence)
-    def count(char,sentence,n):
-        global counter
-        if n == -1:
-            return
-        if sentence[n-1] == char:
-            counter += 1
-        count(char, sentence[n-1],n-1)
-    count(char,sentence)
-    print(counter)
+# counter char in the sentence
+# counter = 0
+# def count(char, sentence):
+#     global counter
+#     n = len(sentence)
+#     if n == 0:
+#         return
+#     if sentence[n - 1] == char:
+#         counter += 1
+#     count(char, sentence[0:n - 1])
+
+def count(char, sentence):
+    if sentence == "":
+        return 0
+    if sentence[0] == char:
+        return 1 + count(char, sentence[1:])
+    else:
+        return count(char, sentence[1:])
 
 
-char = "m"
-sentence = "mama"
-chars(char,sentence)
+# def factorial(n):
+#     global sum
+#     if n <= 1:
+#         return
+#     sum *= n * (n - 1)
+#     factorial(n - 2)
 
+def factorial(n):
+    if n < 2 :
+        return 1
+    else:
+        return n * factorial(n-1)
 
 
 # spiral(10)
@@ -82,3 +96,16 @@ chars(char,sentence)
 
 # for i in range(100):
 #     print("fib({}) => {}".format(i, fib_better(i)))
+
+
+# char = "m"
+# sentence = "make made meal mm emma"
+# print(count(char, sentence))
+
+# for i in range(11):
+#     sum=1
+#     factorial(i)
+#     print("factorial {} => {}".format(i,sum))
+
+# for i in range(11):
+#     print("factorial {} => {}".format(i,factorial(i)))
