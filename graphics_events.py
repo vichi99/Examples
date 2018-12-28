@@ -36,7 +36,7 @@ def keybord(event):
 # canvas.bind('<ButtonRelease-1>', B1_release)
 # canvas.bind('<B1-Motion>', B1_drag)
 # canvas.bind('<Motion>', mouse_motion)
-# canvas.bind('<ButtonPress-1>', create_oval)
+# canvas.bind('<ButtonPress-1>', create_rect)
 # canvas.bind_all('<Key>',keybord)
 
 ##################################################
@@ -53,7 +53,7 @@ def mouse_drag(event):
     canvas.coords(rect_id, x1, y1, event.x, event.y)
 
 # rect_id = None
-# canvas.bind('<ButtonPress-1>', create_rect)
+# canvas.bind('<ButtonPress-1>', create_oval)
 # canvas.bind('<B1-Motion>', mouse_drag)
 
 
