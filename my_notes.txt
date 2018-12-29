@@ -52,19 +52,21 @@ txt open():
           "t" -> text mode (default)
 
 darth vader: (list)
-a.index()
-a.append()
-a.instert(index, value)
-a.pop()
-a.remove()         # remove first value , usefully using with while
-a.sort()
-enumerate(a)       # for index, value in enumerate(a):.....
-text.split()
-"hello\nworld".splitlines() # ['hello'. 'world']
-" ".join(words)
-text.replace(what, out)
-a.isdecimal()
-text.strip()      # delete char in ()
-text.lower()      #upper
-del a[]
-dictionary.update(otherdicionary)
+          a.index()
+          a.append()
+          a.instert(index, value)
+          a.pop()
+          a.remove()         # remove first value , usefully using with while
+          a.sort()
+          enumerate(a)       # for index, value in enumerate(a):.....
+          text.split()
+          "hello\nworld".splitlines() # ['hello'. 'world']
+          " ".join(words)
+          text.replace(what, out)
+          a.isdecimal()
+          text.strip()      # delete char in ()
+          text.lower()      #upper
+          del a[]
+          dictionary.update(otherdicionary)
+random color:
+          color = "#{:06x}".format(random.randrange(256**3))
