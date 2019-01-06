@@ -42,7 +42,7 @@ oval()
 oval_color()
 ##########################################
 
-# oval moving left - right
+# oval moving around mouse
 ##########################################
 def tikk():
     global angle
