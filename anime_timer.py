@@ -1,5 +1,5 @@
 ##############################################################################
-# The program do not nothing special, only shows animation pictures
+# The program do not nothing special, only show timer
 ##############################################################################
 import tkinter
 from datetime import datetime
