@@ -20,7 +20,7 @@ class Employee:
         age = days // 365
         return age
 
-    def card(self):
+    def __str__(self):
         age = str(self.age())
         card = "===========================\n"
         card += "{}: {} age\n".format(self.full_name,age)
@@ -29,7 +29,7 @@ class Employee:
 
 porter = Employee("John", "brown","19910115")
 
-print("Surname: {}" .format(porter.surname))
-print("Full name: {}".format(porter.full_name))
-print("Birthday: {} ; Age: {}".format(porter.birthday, porter.age()))
-print(porter.card())
+# print("Surname: {}" .format(porter.surname))
+# print("Full name: {}".format(porter.full_name))
+# print("Birthday: {} ; Age: {}".format(porter.birthday, porter.age()))
+# print(porter.card())
