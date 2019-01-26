@@ -1,7 +1,7 @@
 ##############################################################################
 # The program do not nothing special, only shows function after via animation
 ##############################################################################
-import tkinter, random, math
+import tkinter, random, mathS
 canvas = tkinter.Canvas(width=640, height=480)
 canvas.pack()
 
