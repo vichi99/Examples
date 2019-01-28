@@ -20,7 +20,7 @@ def circle_make():
     coord= x,y,x+d,y+d
     canvas.coords(circle,coord)
     state = "on"
-    canvas.after(3000,circle_make)
+    canvas.after(1000,circle_make)
 
 
 def mouse_click(event):
