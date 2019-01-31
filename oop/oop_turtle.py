@@ -34,7 +34,7 @@ class Crook(Rect):
 # t1 = Rect(-130, 0)
 # t2 = Wave(0, 0)
 # t3 = Crook(130, 0)
-# t1.rectangle(100)
+# t1.rectaWngle(100)
 # t2.rectangle(100)
 # t3.rectangle(100)
 
