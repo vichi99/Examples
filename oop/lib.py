@@ -21,8 +21,20 @@ class Square:
         self.canvas = canvas
 
 
-    def paint(self):
+    def paint(self, color = "gray"):
         size = self.size
         x = self.cor_x
         y = self.cor_y
-        self.id = self.canvas.create_rectangle(x-size/2, y-size/2,x+size/2, y+size/2,fill="gray")
+        self.id = self.canvas.create_rectangle(x,y,x+size,y+size,fill=color)
+
+class Legatee(Square):
+    pass
+
+class Hi:
+    def __init__(self,word):
+        print(word + " :Hi super")
+
+class Bu(Hi):
+    def __init__(self,word):
+        super().__init__(word)
+        print(word)
