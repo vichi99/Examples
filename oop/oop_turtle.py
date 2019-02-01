@@ -1,4 +1,4 @@
-import turtle
+import turtle,time
 import random
 class Rect(turtle.Turtle):
     def __init__(self, x=0, y=0):
@@ -49,3 +49,5 @@ for x in range(-350, 350 , 50):
 for c in curves:
     c.rectangle(50)
     turtle.update()
+
+turtle.mainloop()
