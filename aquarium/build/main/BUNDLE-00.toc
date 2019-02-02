@@ -1,1 +1,0 @@
-([('main', 'exac/main', 'EXECUTABLE')],)
