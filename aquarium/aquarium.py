@@ -330,5 +330,5 @@ class Player(BaseSprite):
 
 game = Game()
 game.timer()
-game.iconbitmap('img/icon.ico')
+# game.iconbitmap('img/icon.ico')
 game.mainloop()
