@@ -1,6 +1,9 @@
+#!/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
 ##############################################################################
 # This python script shows "aquarium game"
 ##############################################################################
+import os
+import sys
 import tkinter as tk
 import random
 import time
@@ -27,9 +30,10 @@ class Game(tk.Tk):
         return t
 
     def create_background(self):
-        self.bg = tk.PhotoImage(file="background.png")
+        self.bg = tk.PhotoImage(file="img/background.png")
         self.canvas = tk.Canvas(width = self.bg.width(),
                                 height = self.bg.height())
+        self.winfo_toplevel().title("Aquarium")
         self.canvas.pack()
         self.canvas.create_image(self.bg.width()/2, self.bg.height()/2,
                                 image = self.bg)
@@ -92,10 +96,10 @@ class Game(tk.Tk):
             elif isinstance(food, Pellet):
                 p += 1
 
-        self.f = self.display_food_stats("food/flake_icon.png", f, 200)
-        self.w1 = self.display_food_stats("food/worm1_icon.png", w1, 250)
-        self.w2 = self.display_food_stats("food/worm2_icon.png", w2, 300)
-        self.p = self.display_food_stats("food/pellet_icon.png", p, 350)
+        self.f = self.display_food_stats("img/food/flake_icon.png", f, 200)
+        self.w1 = self.display_food_stats("img/food/worm1_icon.png", w1, 250)
+        self.w2 = self.display_food_stats("img/food/worm2_icon.png", w2, 300)
+        self.p = self.display_food_stats("img/food/pellet_icon.png", p, 350)
 
     def display_food_stats(self,file_path, count, position):
         img = tk.PhotoImage(file=file_path)
@@ -171,7 +175,7 @@ class Worm1(Food):
         self.value = value
         self.speed = speed
         super().__init__(canvas)
-        self.sprites = self.load_sprites("food/worm1.png", 1, 1)
+        self.sprites = self.load_sprites("img/food/worm1.png", 1, 1)
         self.canvas.itemconfig(self.id, image=self.sprites[0])
 
 class Worm2(Food):
@@ -181,7 +185,7 @@ class Worm2(Food):
         self.value = value
         self.speed = speed
         super().__init__(canvas)
-        self.sprites = self.load_sprites("food/worm2.png", 1, 1)
+        self.sprites = self.load_sprites("img/food/worm2.png", 1, 1)
         self.canvas.itemconfig(self.id, image=self.sprites[0])
 
 class Pellet(Food):
@@ -191,14 +195,14 @@ class Pellet(Food):
         self.value = value
         self.speed = speed
         super().__init__(canvas)
-        self.sprites = self.load_sprites("food/pellet.png", 1, 1)
+        self.sprites = self.load_sprites("img/food/pellet.png", 1, 1)
         self.canvas.itemconfig(self.id, image=self.sprites[0])
 
 class Flake(Food):
     # value = 2
     # speed = 3
-    flakes = [ "food/flake1.png","food/flake2.png","food/flake3.png",
-                "food/flake4.png","food/flake5.png"]
+    flakes = [ "img/food/flake1.png","img/food/flake2.png","img/food/flake3.png",
+                "img/food/flake4.png","img/food/flake5.png"]
     def __init__(self,canvas, value, speed):
         self.value = value
         self.speed = speed
@@ -246,13 +250,13 @@ class Player(BaseSprite):
             }
         }
         sprite_sheet[self.IDLE][self.LEFT] = self.load_sprites(
-                                                "player/left_idle.png", 5, 4)
+                                            "img/player/left_idle.png", 5, 4)
         sprite_sheet[self.IDLE][self.RIGHT] = self.load_sprites(
-                                                "player/right_idle.png", 5, 4)
+                                            "img/player/right_idle.png", 5, 4)
         sprite_sheet[self.SWIM][self.LEFT] = self.load_sprites(
-                                                "player/left_swim.png", 3, 4)
+                                            "img/player/left_swim.png", 3, 4)
         sprite_sheet[self.SWIM][self.RIGHT] = self.load_sprites(
-                                                "player/right_swim.png", 3, 4)
+                                            "img/player/right_swim.png", 3, 4)
         return sprite_sheet
 
     def next_animation_index(self, idx):
@@ -326,4 +330,5 @@ class Player(BaseSprite):
 
 game = Game()
 game.timer()
+game.iconbitmap('img/icon.ico')
 game.mainloop()
