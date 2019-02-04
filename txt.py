@@ -83,10 +83,10 @@ def csv_dict():
 
 
 
-# txt_read()
+txt_read()
 # txt_read_easier()
 # txt_with()
 # txt_write()
 # txt_read_del()
-csv_read()
+# csv_read()
 # csv_dict()
