@@ -9,7 +9,9 @@ class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow,self).__init__(*args, **kwargs)
 
-        self.windowTitleChanged.connect(lambda x: self.test(x , 9))
+        # self.windowTitleChanged.connect(lambda x: self.test_function())
+        self.windowTitleChanged.connect(lambda x: self.test_function(x, 15))
+
         self.setWindowTitle("My App")
 
         label = QLabel("Nice")
@@ -19,7 +21,7 @@ class MainWindow(QMainWindow):
     def onWindowTitleChange(self, s):
         print(s)
 
-    def test(self, a ="hello", b=7):
+    def test_function(self, a ="hello", b=7):
         print(a, b)
 
 app = QApplication(sys.argv)

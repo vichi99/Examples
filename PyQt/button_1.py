@@ -9,18 +9,15 @@ class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow,self).__init__(*args, **kwargs)
 
-        self.windowTitleChanged.connect(lambda x: self.test(x , 9))
         self.setWindowTitle("My App")
 
-        label = QLabel("Nice")
-        label.setAlignment(Qt.AlignCenter)
-        self.setCentralWidget(label)
+        button = QPushButton("Hello")
+        button.pressed.connect(self.my_button)
 
-    def onWindowTitleChange(self, s):
-        print(s)
+        self.setCentralWidget(button)
 
-    def test(self, a ="hello", b=7):
-        print(a, b)
+    def my_button(self):
+        print("button pushed")
 
 app = QApplication(sys.argv)
 Window = MainWindow()
